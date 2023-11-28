@@ -8,7 +8,7 @@
 /*BODYYYYYSKIEEE*/
 html,
 body {
-  background-image: linear-gradient(to left, #817a66, #9e896f, #be967d, #dfa292, #ffaeae);
+  background-color: white;
   height: 100%;
 }
 
@@ -17,18 +17,110 @@ body {
   flex-direction: column;
 }
 
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.navbar a{
+  font-size: 18px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+  color: white;
+}
+
+.home {
+  display: flex;
+  background: url("../images/main.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.home-content{
+  max-width: 600px;
+}
+
+.home-content h1{
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.home-content p{
+  font-size: 20px;
+  color: black;
+  margin: 20px 0 40px;
+}
+
+.home-content .btn-box{
+  display: flex;
+  justify-content: space-between;
+  width: 345px;
+  height: 50px;
+}
+
+
+.btn-box a{
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  font-size: 17px;
+  color: #081b29;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+.btn-box a::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: gray;
+  z-index: -1;
+  transition: .5s;
+}
+
+.btn-box a:hover::before{
+  width: 100%;
+}
+
 .active{
-  background-color: #CA9A7C;
+  background-color: gray;
   border-radius: 10px;
 }
 
 .nav-link:hover{
-  background-color: #FFEADD;
+  background-color: gray;
+  border-radius: 10px;
 }
 
-.navbar-nav .nav-item:hover {
-  background-color: #ECC8B1;
-}
 
 .nav-item{
   font-size: 1.2rem;
@@ -59,11 +151,6 @@ main {
   margin-right: auto;
 }
 
-header {
-  background: no-repeat center center;
-  background-size: cover;
-  color: white;
-}
 
 .color-overlay {
   background-color: rgba(0, 0, 0, 0.4);
@@ -165,8 +252,8 @@ img.rounded-circle:hover {
 /*FOOTERSSKIEEE*/
 
 footer {
-  background-color: black;
-  color: #fff;
+  background-color: white;
+  color: black;
   flex-shrink: 0;
 }
 
@@ -175,7 +262,7 @@ footer {
 }
 
 footer a {
-  color: #fff;
+  color: black;
   margin: 0 10px;
   font-size: 24px;
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
